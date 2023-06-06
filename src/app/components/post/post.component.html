@@ -1,0 +1,53 @@
+<div class="px-3 d-flex post-container">
+  <div class="mt-2 d-flex align-self-start">
+    <img class="avatar" src="assets/images/avatar.png" alt="avatar-img">
+  </div>
+
+  <div class="w-100 d-flex flex-column">
+    <div ngbDropdown class="d-flex align-items-center justify-content-between account-info" placement="bottom-end">
+      <div class="mt-2 info">
+        <span>{{ name }}</span>
+        <span class="mx-2 user">@{{ username }}</span>
+        <span class="me-2 timestamp">- {{ timestamp }}</span>
+      </div>
+
+      <button type="button" class="settings" id="dropdownBasic1" ngbDropdownToggle>
+        <img class="icon" src="assets/images/settings.svg" alt="settings-icon">
+      </button>
+      <div ngbDropdownMenu 
+        aria-labelledby="dropdownBasic1">
+        <div class="py-2 d-flex align-items-center justify-content-center dropdown-container" (click)="showDeleteModal = true;">
+          <img class="me-3 trash-icon" src="assets/images/trash.svg" alt="trash-icon">
+          <span>Excluir</span>
+        </div>
+      </div>
+    </div>
+    
+    <span>{{ post.text }}</span>
+
+    <div class="py-3 d-flex justify-items-start icons">
+      <div class="col">
+        <img class="icon" src="assets/images/chat.svg" alt="chat-icon">
+      </div>
+      <div class="col">
+        <img class="icon" src="assets/images/retweet.svg" alt="retweet-icon">
+      </div>
+      <div class="col">
+        <img class="icon" src="assets/images/like.svg" alt="like-icon">
+      </div>
+      <div class="col">
+        <img class="icon" src="assets/images/graph.svg" alt="graph-icon">
+      </div>
+      <div class="col">
+        <img class="icon" src="assets/images/save.svg" alt="save-icon">
+      </div>
+    </div>
+  </div>
+</div>
+
+<app-modal-delete 
+  [showModal]="showDeleteModal"
+  [post]="post"
+  (close)="showDeleteModal = false;"
+  (confirmDelete)="handleDeletePost()">
+</app-modal-delete>

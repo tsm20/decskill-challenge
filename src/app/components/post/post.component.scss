@@ -1,0 +1,23 @@
+.dropdown-menu {
+  padding: 0;
+}
+
+.dropdown-container {
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 4px;
+  color: rgb(255, 0, 47);
+  cursor: pointer;
+  &:hover {
+    background-color: rgb(252, 233, 233);
+  }
+
+  .trash-icon {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.dropdown-toggle::after {
+  display: none;
+}

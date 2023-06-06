@@ -1,1 +1,136 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';
+
+
+.page {
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.wrapper {
+  border: 1px solid #e1e1e1;
+  
+}
+.page-title {
+  height: 53px;
+  line-height: 24px;
+  font-size: 20px;
+  color: rgb(15, 20, 25);
+  font-weight: 700;
+  font-family: "TwitterChirp",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  word-wrap: break-word;
+}
+
+.header {
+  border-top: 1px solid #e1e1e1;
+  color: #536471;
+}
+
+.input-container {
+  width: 100%;
+}
+
+textarea {
+  resize: none;
+  line-height: 24px;
+  font-weight: 600;
+  font-size: 20px;
+
+  &:focus,
+  &:active {
+    outline: none !important;
+    box-shadow: none;
+  }
+}
+
+.privacy {
+  color: #1D9BF0;
+  font-weight: 700;
+  font-size: 14px;
+  cursor: pointer;
+
+  .privacy-icon {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+.post-input {
+  border: 0px;
+  height: 28px;
+}
+
+.post-container,
+.submit-container {
+  border-top: 1px solid #e1e1e1;
+}
+
+.icon {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+
+  &:hover {
+    filter: brightness(95%);
+  }
+}
+
+.submit-btn {
+  height: 36px;
+  font-weight: 600;
+  padding: 0 16px;
+  background-color: #1D9BF0;
+  outline-style: none;
+  border-radius: 36px;
+  color: white;
+  border: none;
+  &:hover {
+    filter: brightness(95%);
+  }
+}
+
+.danger-btn {
+  @extend .submit-btn;
+  color: rgb(255, 0, 47);
+  background-color: rgb(252, 233, 233);
+}
+
+.chars {
+  color: rgb(178, 178, 178);
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.avatar {
+  margin-right: 12px;
+  width: 48px;
+  height: 48px;
+}
+
+.account-info {
+  font-weight: 600;
+}
+
+.timestamp {
+  font-size: 14px;
+  color: rgb(180, 180, 180);
+  font-weight: 500;
+}
+.user {
+  font-size: 15px;
+  color: rgb(147, 147, 147);
+}
+
+.settings {
+  background-color: transparent;
+  border: 0;
+  &:focus,
+  &:active {
+    outline: none !important;
+    box-shadow: none;
+  }
+}
+
